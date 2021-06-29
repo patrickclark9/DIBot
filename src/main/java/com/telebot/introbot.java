@@ -39,9 +39,10 @@ public class introbot extends TelegramLongPollingBot {
         String commands = update.getMessage().getText();
         SendMessage message = new SendMessage();
         if ("/start".equals(commands)) {
-            message.setText("Ciao, benvenuto su DIBot!" + "Qui hai accesso rapido a tutte le informazioni presenti"
-                    + "sul sito del dipartimento di Informatica dell'Università degli Studi di Bari."
-                    + "Che informazioni vuoi avere?");
+            message.setText(
+                    "Ciao, benvenuto su DIBot!" + " " + "Qui hai accesso rapido a tutte le informazioni presenti" + " "
+                            + "sul sito del dipartimento di Informatica dell'Università degli Studi di Bari." + " "
+                            + "Che informazioni vuoi avere?");
             ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
             List<KeyboardRow> keyboard = new ArrayList<>();
             KeyboardRow row = new KeyboardRow();
@@ -58,6 +59,7 @@ public class introbot extends TelegramLongPollingBot {
             keyboard.add(row);
             row = new KeyboardRow();
             row.add("Informatica - Eventi");
+            row.add("Segnalazione Errore");
             keyboard.add(row);
             keyboardMarkup.setKeyboard(keyboard);
             message.setReplyMarkup(keyboardMarkup);
@@ -245,6 +247,15 @@ public class introbot extends TelegramLongPollingBot {
                         }
                     }
                 }
+            }
+
+        } else if ("Segnalazione Errore".equals(commands)) {
+            message.setChatId(String.valueOf(update.getMessage().getChatId()));
+            message.setText("Se hai riscontrato un errore, per favore invia un mail a @@@@, descrivendo l'errore");
+            try {
+                execute(message);
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
             }
 
         } else {
