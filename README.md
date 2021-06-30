@@ -21,7 +21,7 @@ Poichè l'operazione di Scraping potrebbe non andare a buon fine, per esempio a 
 **Istruzioni per Building del progett**
 
 Per buildare il progetto è consigliato un "Fat-Jar". Un Fat-Jar è un jar con al suo interno tutte le dependencies necessario. Il file Pom.xml contiene già il plugin per buildare il fat-jar. Una volta aggiunto un file config.java con i parametri botToken e botName, e i relativi metodi getter per restituirli, basta buildare il progetto con il comando "mvn clean package". Verranno buildati 2 jar, di cui uno denominato "nomeprogetto-jar-with-dependecies". Quest'ultimo è il fat jar.
-Se si vuole deployare il jar su docker, il dockerfile possiede una immagine ubuntu. Non è consigliato deployare il progetto su docker con Sistemi Operativi con dimensioni dei file di paging di 4kb, in quanto il JDK si aspetta file di paging a 64kb. Una volta installato il Docker CLI, il comando per il deploy è "docker build -t nomeperdocker ." .
+Se si vuole deployare il jar su docker, il dockerfile possiede una immagine ubuntu. Non è consigliato deployare il progetto su docker con Sistemi Operativi con dimensioni dei file di paging di 4kb (esempio: MACOS Big Sur per Mac M1, distro Linux settate con dimensione 4k), in quanto il JDK si aspetta file di paging a 64kb. Una volta installato il Docker CLI, il comando per il deploy è "docker build -t nomeperdocker ." .
 
 
 
