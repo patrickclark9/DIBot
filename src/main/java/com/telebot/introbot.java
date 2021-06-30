@@ -252,11 +252,6 @@ public class introbot extends TelegramLongPollingBot {
         } else if ("Segnalazione Errore".equals(commands)) {
             message.setChatId(String.valueOf(update.getMessage().getChatId()));
             message.setText("Se hai riscontrato un errore, per favore invia un mail a @@@@, oppure apri un Issue su GitHub al link: https://github.com/mariogiordano1/Scraper/issues, descrivendo l'errore");
-            try {
-                execute(message);
-            } catch (TelegramApiException e) {
-                e.printStackTrace();
-            }
 
         } else {
             message.setText("Non ho capito bene; usa /start per avviare la tastiera");
