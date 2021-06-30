@@ -7,7 +7,7 @@ DIBot è un bot per la piattaforma di messaggistica Telegram che fornisce access
 **Strumenti di Sviluppo**
 
 Il bot è stato sviluppato utilizzando il Wrapper in linguaggio Java di Telegram bot API, utilizzando principalmente l'IDE IntelliJ IDEA per stesura di codice, testing e debugging. Per la gestione delle Dependencies Java e per il Building del progetto è stato utilizzato Maven vers. 3.8.1 (https://maven.apache.org/) Per il controllo di versione è stato utilizzato Git, con repository remota su GitHub (GitHub: https://github.com/
-Repository Bot: https://github.com/patrickclark9/ScraperBot). Come database è stato utilizzato il Database orientato ai Documenti MongoDB, con cluster hostato su un server Azure, e gestito tramite l'applicazione GUI MongoDB Compass. Si è optato per esso per facilità d'uso, velocità nella gestione delle Query e ampia documentazione e supporto. Per il deploy invece, si è sfruttato Docker, e l'applicazione è stata inserita all'interno di un Container, sfruttando come Docker Image un'immagine Ubuntu.
+Repository Bot: https://github.com/patrickclark9/DIBot). Come database è stato utilizzato il Database orientato ai Documenti MongoDB, con cluster hostato su un server Azure, e gestito tramite l'applicazione GUI MongoDB Compass. Si è optato per esso per facilità d'uso, velocità nella gestione delle Query e ampia documentazione e supporto. Per il deploy invece, si è sfruttato Docker, e l'applicazione è stata inserita all'interno di un Container, sfruttando come Docker Image un'immagine Ubuntu.
 Per la stesura della documentazione e la gestione dei container è stato utilizzato l'editor Visual Studio Code.
 ****
 **Come funziona**
