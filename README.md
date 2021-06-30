@@ -17,7 +17,7 @@ All'avvio, il bot si connette al Cluster di MongoDB dov'è hostato il Database c
 Con il comando "/start", l'utente avvia la conversazione con il bot. Il comando apre una tastiera personalizzata con tutte le opzioni disponibili per la conversazione con il bot. Premuto un pulsante della tastiera, il programma effettua una query sul database in base alla scelta dell'utente, e restituisce le informazioni richieste da quest'ultimo in formato testuale, con annessi eventuali collegamenti ipertestuali alle pagine di riferimento.
 
 Poichè l'operazione di Scraping potrebbe non andare a buon fine, per esempio a seguito di un aggiornamento sostanziale al codice HTML del sito web, oppure a seguito di un malfunzionamento del server host dello Scraper, è stato introdotto un pulsante di segnalazione di errore, con annesse mail e pagina Issue di GitHub per la segnalazione dell'errore.
-
+****
 **Istruzioni per Building del progett**
 
 Per buildare il progetto è consigliato un "Fat-Jar". Un Fat-Jar è un jar con al suo interno tutte le dependencies necessario. Il file Pom.xml contiene già il plugin per buildare il fat-jar. Una volta aggiunto un file config.java con i parametri botToken e botName, e i relativi metodi getter per restituirli, basta buildare il progetto con il comando "mvn clean package". Verranno buildati 2 jar, di cui uno denominato "nomeprogetto-jar-with-dependecies". Quest'ultimo è il fat jar.
